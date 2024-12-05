@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MenuItem: Identifiable {
+struct MenuItem: Identifiable, Hashable {
     var id = UUID()
     var name: String
     var subMenuItems: [MenuItem]?

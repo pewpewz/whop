@@ -14,9 +14,10 @@ struct ContentView: View {
     @State var isSetupFinished:Bool = false
     
     @State var sampleMenuItems: [MenuItem] = []
-
+    
+    @StateObject var webViewModel = WebViewModel(url: "https://google.com/")
+    
     var body: some View {
-        
         NavigationStack {
             List(sampleMenuItems, children: \.subMenuItems) { item in
                 if item.subMenuItems?.isEmpty == false {
@@ -24,15 +25,15 @@ struct ContentView: View {
                         .font(.system(.title3, design: .rounded))
                         .bold()
                         .background(Color.gray.opacity(0.001))
-                        .onTapGesture {
-                            print("Text Tapped")
-                        }
                 } else {
-                    MenuItemView(name: item.name)
+                    MenuItemView(name: item.name, value: item)
                 }
             }
+            .navigationDestination(for: MenuItem.self) { menuItem in
+                WebViewContainer(webViewModel: webViewModel)
+            }
             .navigationTitle("Whop Infinite Scroll")
-            
+
             if !isLoading {
                 ProgressView {
                     Text("Loading")
@@ -47,10 +48,6 @@ struct ContentView: View {
         }.onAppear() {
             setup()
         }
-    }
-    
-    func tapped(_ name: String) {
-        print("tapped \(name)")
     }
 
     // setups the first 20 rows on appear
@@ -90,3 +87,11 @@ struct ContentView: View {
 let subMenuItemsMock:[MenuItem] = [.init(name: "More Cells"),
                                 .init(name: "More Cells"),
                                 .init(name: "More Cells")]
+struct PlayerView: View {
+    let name: String
+
+    var body: some View {
+        Text("Selected player: \(name)")
+            .font(.largeTitle)
+    }
+}

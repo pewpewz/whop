@@ -9,19 +9,16 @@ import SwiftUI
 
 struct MenuItemView: View {
     let name: String
+    let value: MenuItem
     
     var body: some View {
-        Text(name)
+        NavigationLink(name, value: value)
             .font(.system(.title3, design: .rounded))
             .frame(maxWidth: .infinity, alignment: .leading)
             .bold()
-            .background(Color.gray.opacity(0.001))
-            .onTapGesture {
-                print("Text Tapped")
-            }
     }
 }
 
 #Preview {
-    MenuItemView(name: "Menu Item")
+    MenuItemView(name: "Menu Item", value: MenuItem(name: "menu name"))
 }

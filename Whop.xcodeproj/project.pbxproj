@@ -14,10 +14,10 @@
 		E9A8B6522D00F4EB00039BB3 /* WhopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B6512D00F4EB00039BB3 /* WhopTests.swift */; };
 		E9A8B65C2D00F4EB00039BB3 /* WhopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B65B2D00F4EB00039BB3 /* WhopUITests.swift */; };
 		E9A8B65E2D00F4EB00039BB3 /* WhopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B65D2D00F4EB00039BB3 /* WhopUITestsLaunchTests.swift */; };
-		E9A8B66C2D0118F100039BB3 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B66B2D0118F100039BB3 /* TextView.swift */; };
 		E9A8B66F2D012C8700039BB3 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B66E2D012C8700039BB3 /* MenuItem.swift */; };
-		E9A8B6712D01465A00039BB3 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B6702D01465A00039BB3 /* WebView.swift */; };
 		E9A8B6732D0148DA00039BB3 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B6722D0148DA00039BB3 /* MenuItemView.swift */; };
+		E9A8B6752D0154EA00039BB3 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B6742D0154EA00039BB3 /* WebViewModel.swift */; };
+		E9A8B6772D01550200039BB3 /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B6762D01550200039BB3 /* WebViewContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,10 +48,10 @@
 		E9A8B6572D00F4EB00039BB3 /* WhopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A8B65B2D00F4EB00039BB3 /* WhopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhopUITests.swift; sourceTree = "<group>"; };
 		E9A8B65D2D00F4EB00039BB3 /* WhopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhopUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E9A8B66B2D0118F100039BB3 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		E9A8B66E2D012C8700039BB3 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
-		E9A8B6702D01465A00039BB3 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		E9A8B6722D0148DA00039BB3 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		E9A8B6742D0154EA00039BB3 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
+		E9A8B6762D01550200039BB3 /* WebViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				E9A8B66D2D012C7C00039BB3 /* Models */,
-				E9A8B66A2D0118E300039BB3 /* views */,
+				E9A8B66A2D0118E300039BB3 /* Views */,
 				E9A8B6402D00F4EA00039BB3 /* WhopApp.swift */,
 				E9A8B6422D00F4EA00039BB3 /* ContentView.swift */,
 				E9A8B6442D00F4EB00039BB3 /* Assets.xcassets */,
@@ -137,14 +137,14 @@
 			path = WhopUITests;
 			sourceTree = "<group>";
 		};
-		E9A8B66A2D0118E300039BB3 /* views */ = {
+		E9A8B66A2D0118E300039BB3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E9A8B66B2D0118F100039BB3 /* TextView.swift */,
-				E9A8B6702D01465A00039BB3 /* WebView.swift */,
 				E9A8B6722D0148DA00039BB3 /* MenuItemView.swift */,
+				E9A8B6742D0154EA00039BB3 /* WebViewModel.swift */,
+				E9A8B6762D01550200039BB3 /* WebViewContainer.swift */,
 			);
-			path = views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E9A8B66D2D012C7C00039BB3 /* Models */ = {
@@ -285,12 +285,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9A8B66C2D0118F100039BB3 /* TextView.swift in Sources */,
-				E9A8B6712D01465A00039BB3 /* WebView.swift in Sources */,
 				E9A8B66F2D012C8700039BB3 /* MenuItem.swift in Sources */,
 				E9A8B6432D00F4EA00039BB3 /* ContentView.swift in Sources */,
 				E9A8B6732D0148DA00039BB3 /* MenuItemView.swift in Sources */,
+				E9A8B6772D01550200039BB3 /* WebViewContainer.swift in Sources */,
 				E9A8B6412D00F4EA00039BB3 /* WhopApp.swift in Sources */,
+				E9A8B6752D0154EA00039BB3 /* WebViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
