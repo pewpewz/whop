@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct TextView: View {
-    var color: Color
+    @State var color: Color
     let text: String
+    
+    var numbers = Array(0...5)
     
     var body: some View {
         Text("\(text)!")
@@ -20,6 +22,18 @@ struct TextView: View {
             .font(.callout)
             .cornerRadius(20)
             .shadow(color: color, radius: 5, x: 10, y: 10)
+            .onTapGesture {
+                print("hello tap")
+                expand()
+                changeColor()
+            }
+    }
+    
+    func changeColor() {
+        self.color = .red
+    }
+    func expand() {
+        print(" will expand on code hit here")
     }
 }
 

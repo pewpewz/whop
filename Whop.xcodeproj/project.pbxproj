@@ -15,6 +15,7 @@
 		E9A8B65C2D00F4EB00039BB3 /* WhopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B65B2D00F4EB00039BB3 /* WhopUITests.swift */; };
 		E9A8B65E2D00F4EB00039BB3 /* WhopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B65D2D00F4EB00039BB3 /* WhopUITestsLaunchTests.swift */; };
 		E9A8B66C2D0118F100039BB3 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B66B2D0118F100039BB3 /* TextView.swift */; };
+		E9A8B66F2D012C8700039BB3 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B66E2D012C8700039BB3 /* MenuItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		E9A8B65B2D00F4EB00039BB3 /* WhopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhopUITests.swift; sourceTree = "<group>"; };
 		E9A8B65D2D00F4EB00039BB3 /* WhopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhopUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E9A8B66B2D0118F100039BB3 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		E9A8B66E2D012C8700039BB3 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		E9A8B63F2D00F4EA00039BB3 /* Whop */ = {
 			isa = PBXGroup;
 			children = (
+				E9A8B66D2D012C7C00039BB3 /* Models */,
 				E9A8B66A2D0118E300039BB3 /* views */,
 				E9A8B6402D00F4EA00039BB3 /* WhopApp.swift */,
 				E9A8B6422D00F4EA00039BB3 /* ContentView.swift */,
@@ -136,6 +139,14 @@
 				E9A8B66B2D0118F100039BB3 /* TextView.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		E9A8B66D2D012C7C00039BB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E9A8B66E2D012C8700039BB3 /* MenuItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9A8B66C2D0118F100039BB3 /* TextView.swift in Sources */,
+				E9A8B66F2D012C8700039BB3 /* MenuItem.swift in Sources */,
 				E9A8B6432D00F4EA00039BB3 /* ContentView.swift in Sources */,
 				E9A8B6412D00F4EA00039BB3 /* WhopApp.swift in Sources */,
 			);
