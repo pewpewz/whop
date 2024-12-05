@@ -12,8 +12,7 @@ Take home test
 
 1. [Requirements](#requirements)  
 2. [Installation](#installation)  
-5. [Testing](#testing)  
-7. [License](#license)  
+3. [Testing](#testing)  
 
 ---
 
@@ -51,8 +50,3 @@ Include instructions for running tests:
 1. Scroll all the way down to see infinite scrolling.
 
 ---
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).  
-
