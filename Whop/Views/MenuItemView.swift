@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct MenuItemView: View {
+    
     let name: String
-    let value: MenuItem
     
     var body: some View {
-        NavigationLink(name, value: value)
-            .font(.system(.title2, design: .rounded))
-            .frame(maxWidth: .infinity, alignment: .leading)
+        Text(name)
+            .font(.system(.headline, design: .rounded))
+            .bold()
     }
 }

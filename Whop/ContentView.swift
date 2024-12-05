@@ -19,11 +19,9 @@ struct ContentView: View {
         NavigationStack {
             List(sampleMenuItems, children: \.subMenuItems) { item in
                 if item.subMenuItems?.isEmpty == false {
-                    Text(item.name)
-                        .font(.system(.headline, design: .rounded))
-                        .bold()
+                    MenuItemView(name: item.name)
                 } else {
-                    MenuItemView(name: item.name, value: item)
+                    NavigationItemView(name: item.name, value: item)
                 }
             }
             .navigationDestination(for: MenuItem.self) { menuItem in
