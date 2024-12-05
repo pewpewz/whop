@@ -13,12 +13,7 @@ struct MenuItemView: View {
     
     var body: some View {
         NavigationLink(name, value: value)
-            .font(.system(.title3, design: .rounded))
+            .font(.system(.title2, design: .rounded))
             .frame(maxWidth: .infinity, alignment: .leading)
-            .bold()
     }
-}
-
-#Preview {
-    MenuItemView(name: "Menu Item", value: MenuItem(name: "menu name"))
 }

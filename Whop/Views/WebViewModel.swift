@@ -18,4 +18,5 @@ class WebViewModel: ObservableObject {
     init(url: String) {
         self.url = url
     }
+
 }

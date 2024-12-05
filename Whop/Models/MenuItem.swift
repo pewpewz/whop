@@ -10,6 +10,7 @@ import Foundation
 struct MenuItem: Identifiable, Hashable {
     var id = UUID()
     var name: String
+    var url: String
     var subMenuItems: [MenuItem]?
 }
 
