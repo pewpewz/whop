@@ -6,6 +6,8 @@ Whop Test
 
 Take home test
 
+https://github.com/user-attachments/assets/ae44d78f-23b6-48b4-8fdd-874b859a3cbc
+
 ---
 
 ## Table of Contents
