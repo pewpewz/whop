@@ -141,7 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				E9A8B6722D0148DA00039BB3 /* MenuItemView.swift */,
-				E9A8B6742D0154EA00039BB3 /* WebViewModel.swift */,
 				E9A8B6762D01550200039BB3 /* WebViewContainer.swift */,
 			);
 			path = Views;
@@ -150,6 +149,7 @@
 		E9A8B66D2D012C7C00039BB3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E9A8B6742D0154EA00039BB3 /* WebViewModel.swift */,
 				E9A8B66E2D012C8700039BB3 /* MenuItem.swift */,
 			);
 			path = Models;
@@ -461,6 +461,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -489,6 +490,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
