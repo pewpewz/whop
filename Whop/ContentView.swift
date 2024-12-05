@@ -7,28 +7,24 @@
 
 import SwiftUI
 
+let subMenuItemsMock:[MenuItem] = [.init(name: "More Cells"),
+                                .init(name: "More Cells"),
+                                .init(name: "More Cells"),
+                                .init(name: "More Cells"),
+                                .init(name: "More Cells")]
+
 
 struct ContentView: View {
-
     
-    @State var numbers = Array(0...20)
-    @State var isFinished:Bool = false
     @State var isLoading:Bool = false
+    
+    @State var isSetupFinished:Bool = false
+
+    @State var subMenuItems: [MenuItem] = subMenuItemsMock
+    
+    @State var sampleMenuItems: [MenuItem] = []
 
     var body: some View {
-
-        // Sub-menu items
-        let subMenuItems = [ MenuItem(name: "Swift"),
-                                 MenuItem(name: "Vulcano"),
-                                 MenuItem(name: "Swift Mini"),
-                                 MenuItem(name: "Lux D")
-                                ]
-        
-        // Main menu items
-        let sampleMenuItems = [
-                                MenuItem(name: "Menu", subMenuItems: subMenuItems),
-                                MenuItem(name: "Web Cell Link"),
-                            ]
         
         NavigationStack {
             List(sampleMenuItems, children: \.subMenuItems) { item in
@@ -36,23 +32,34 @@ struct ContentView: View {
                     .font(.system(.title3, design: .rounded))
                     .bold()
             }
-            
-//            List {
-//                ForEach(numbers, id: \.self) { number in
-//                    TextView(color: .green, text: "Even: \(number)")
-//                }
-//                
-//                if !isFinished {
-//                    ProgressView()
-//                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-//                        .foregroundColor(.blue)
-//                        .foregroundColor(.yellow)
-//                        .onAppear() {
-//                            loadMore()
-//                        }
-//                }
-//            }
             .navigationTitle("Whop Infinite Scroll")
+            
+            if !isLoading {
+                ProgressView()
+                    .padding()
+                    .foregroundColor(.red)
+                    .onAppear() {
+                        loadMore()
+                    }
+            }
+        }.onAppear() {
+            setup()
+        }
+    }
+    
+    func setup() {
+        guard !isSetupFinished else {
+            return
+        }
+        isSetupFinished = true
+        print("setup ")
+        for i in 0..<20 {
+            let isEven = i % 2
+            if isEven == 0 {
+                sampleMenuItems.append(MenuItem(name: "Menu", subMenuItems: subMenuItems))
+            } else {
+                sampleMenuItems.append(MenuItem(name: "Web Cell Link"))
+            }
         }
     }
     
@@ -60,19 +67,21 @@ struct ContentView: View {
         
         if !isLoading {
             isLoading = true
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                numbers.append(contentsOf:numbers.count + 1...numbers.count + 20)
+                
+                for i in sampleMenuItems.count + 1..<sampleMenuItems.count + 20 {
+                    let isEven = i % 2
+                    if isEven == 0 {
+                        sampleMenuItems.append(MenuItem(name: "Menu \(i)", subMenuItems: subMenuItems))
+                    } else {
+                        sampleMenuItems.append(MenuItem(name: "Web Cell Link \(i)"))
+                    }
+                }
                 
                 isLoading = false
-                if numbers.count > 250 {
-                    isFinished = true
-                }
             }
         }
         
     }
 }
-//
-//#Preview {
-//    ContentView()
-//}
