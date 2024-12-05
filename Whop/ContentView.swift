@@ -19,9 +19,17 @@ struct ContentView: View {
         
         NavigationStack {
             List(sampleMenuItems, children: \.subMenuItems) { item in
-                Text(item.name)
-                    .font(.system(.title3, design: .rounded))
-                    .bold()
+                if item.subMenuItems?.isEmpty == false {
+                    Text(item.name)
+                        .font(.system(.title3, design: .rounded))
+                        .bold()
+                        .background(Color.gray.opacity(0.001))
+                        .onTapGesture {
+                            print("Text Tapped")
+                        }
+                } else {
+                    MenuItemView(name: item.name)
+                }
             }
             .navigationTitle("Whop Infinite Scroll")
             
@@ -39,6 +47,10 @@ struct ContentView: View {
         }.onAppear() {
             setup()
         }
+    }
+    
+    func tapped(_ name: String) {
+        print("tapped \(name)")
     }
 
     // setups the first 20 rows on appear

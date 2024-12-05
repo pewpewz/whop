@@ -16,6 +16,8 @@
 		E9A8B65E2D00F4EB00039BB3 /* WhopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B65D2D00F4EB00039BB3 /* WhopUITestsLaunchTests.swift */; };
 		E9A8B66C2D0118F100039BB3 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B66B2D0118F100039BB3 /* TextView.swift */; };
 		E9A8B66F2D012C8700039BB3 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B66E2D012C8700039BB3 /* MenuItem.swift */; };
+		E9A8B6712D01465A00039BB3 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B6702D01465A00039BB3 /* WebView.swift */; };
+		E9A8B6732D0148DA00039BB3 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8B6722D0148DA00039BB3 /* MenuItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		E9A8B65D2D00F4EB00039BB3 /* WhopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhopUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E9A8B66B2D0118F100039BB3 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		E9A8B66E2D012C8700039BB3 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		E9A8B6702D01465A00039BB3 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		E9A8B6722D0148DA00039BB3 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				E9A8B66B2D0118F100039BB3 /* TextView.swift */,
+				E9A8B6702D01465A00039BB3 /* WebView.swift */,
+				E9A8B6722D0148DA00039BB3 /* MenuItemView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -280,8 +286,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9A8B66C2D0118F100039BB3 /* TextView.swift in Sources */,
+				E9A8B6712D01465A00039BB3 /* WebView.swift in Sources */,
 				E9A8B66F2D012C8700039BB3 /* MenuItem.swift in Sources */,
 				E9A8B6432D00F4EA00039BB3 /* ContentView.swift in Sources */,
+				E9A8B6732D0148DA00039BB3 /* MenuItemView.swift in Sources */,
 				E9A8B6412D00F4EA00039BB3 /* WhopApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
