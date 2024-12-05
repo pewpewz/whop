@@ -7,20 +7,11 @@
 
 import SwiftUI
 
-let subMenuItemsMock:[MenuItem] = [.init(name: "More Cells"),
-                                .init(name: "More Cells"),
-                                .init(name: "More Cells"),
-                                .init(name: "More Cells"),
-                                .init(name: "More Cells")]
-
-
 struct ContentView: View {
     
     @State var isLoading:Bool = false
     
     @State var isSetupFinished:Bool = false
-
-    @State var subMenuItems: [MenuItem] = subMenuItemsMock
     
     @State var sampleMenuItems: [MenuItem] = []
 
@@ -35,53 +26,55 @@ struct ContentView: View {
             .navigationTitle("Whop Infinite Scroll")
             
             if !isLoading {
-                ProgressView()
+                ProgressView {
+                    Text("Loading")
+                    .foregroundColor(.pink)
+                    .bold()
                     .padding()
-                    .foregroundColor(.red)
                     .onAppear() {
-                        loadMore()
+                        loadMoreCells()
                     }
+                }
             }
         }.onAppear() {
             setup()
         }
     }
-    
+
+    // setups the first 20 rows on appear
     func setup() {
         guard !isSetupFinished else {
             return
         }
         isSetupFinished = true
-        print("setup ")
-        for i in 0..<20 {
+        createRows(0, 10)
+    }
+    
+    func createRows(_ start: Int, _ end: Int) {
+        for i in start..<end {
             let isEven = i % 2
             if isEven == 0 {
-                sampleMenuItems.append(MenuItem(name: "Menu", subMenuItems: subMenuItems))
+                sampleMenuItems.append(.init(name: "Row \(i)", subMenuItems: subMenuItemsMock))
             } else {
-                sampleMenuItems.append(MenuItem(name: "Web Cell Link"))
+                sampleMenuItems.append(.init(name: "Row Web Link \(i)"))
             }
         }
     }
     
-    func loadMore() {
+    func loadMoreCells() {
         
         if !isLoading {
             isLoading = true
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                
-                for i in sampleMenuItems.count + 1..<sampleMenuItems.count + 20 {
-                    let isEven = i % 2
-                    if isEven == 0 {
-                        sampleMenuItems.append(MenuItem(name: "Menu \(i)", subMenuItems: subMenuItems))
-                    } else {
-                        sampleMenuItems.append(MenuItem(name: "Web Cell Link \(i)"))
-                    }
-                }
-                
+                createRows(sampleMenuItems.count + 1, sampleMenuItems.count + 20)
                 isLoading = false
             }
         }
         
     }
 }
+
+let subMenuItemsMock:[MenuItem] = [.init(name: "More Cells"),
+                                .init(name: "More Cells"),
+                                .init(name: "More Cells")]
